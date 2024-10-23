@@ -44,202 +44,95 @@
       <p>Your cart <i class="fa-solid fa-cart-shopping"></i> is empty</p>
     </header>
     <!-- Form -->
-    <div class="hero">
-      <form class="checkout-form" action="">
-        <section id="customer-details">
-          <h4 class="checkout-headings">Account Information</h4>
-          <div class="row input-row">
-            <input
-              class="checkout-form__input"
-              type="email"
-              placeholder="Email"
-            />
-          </div>
-          <div class="row input-row">
-            <input
-              class="checkout-form__input"
-              type="tel"
-              placeholder="Phone Number"
-            />
-          </div>
-          <h4 class="checkout-headings">Shipping Address</h4>
-          <div class="row input-row">
-            <input
-              class="checkout-form__input"
-              type="text"
-              placeholder="Address"
-            />
-          </div>
-          <div class="row input-row">
-            <input
-              class="checkout-form__input"
-              type="text"
-              placeholder="City"
-            />
-          </div>
-          <div class="row input-state input-state__data">
-            <div class="input-state__data">
-              <input
-                class="checkout-form__input state"
-                type="text"
-                placeholder="State/Province"
-              />
-              <input
-                class="checkout-form__input zip__code"
-                type="text"
-                placeholder="Zip/Postal Code"
-              />
-            </div>
-          </div>
-          <div class="row input-row">
-            <select
-              class="checkout-form__input"
-              name="Country"
-              id="select-country"
-            >
-              <option value="United States">Canada</option>
-              <option value="Canada">Canada</option>
-            </select>
-          </div>
-          <h4 class="checkout-headings">Billing Address</h4>
-          <div class="row input-row_checkbox">
-            <input
-              class="checkout-form__checkbox"
-              type="checkbox"
-              placeholder="City"
-            />
-            <label class="checkout-form__label"
-              >Use different billing address</label
-            >
 
-            <div class="diff--bill--addr">
-              <div class="row input-row">
-                <input
-                  class="checkout-form__input"
-                  type="text"
-                  placeholder="Address"
-                />
+    <div class="checkout-container">
+      <div id="change-checkout-orientation">
+          <div id="checkout-left">
+              <h2>Account Information</h2>
+              <input type="email" placeholder="Email">
+              <input type="tel" placeholder="Phone Number">
+              <h2>Shipping Address</h2>
+              <input type="text" placeholder="Address" >
+              <input type="text" placeholder="City">
+              <div class="state-zipcode">
+                  <input type="text" placeholder="State/Province">
+                  <input type="text" placeholder="Zip/Postal Code">
               </div>
-              <div class="row input-row">
-                <input
-                  class="checkout-form__input"
-                  type="text"
-                  placeholder="City"
-                />
+              <label for="country">Country</label>
+              <select name="country" id="country" >
+                  <option value="US" selected>United States</option>
+                  <option value="CA"> Canada</option>
+              </select>
+              <h2>Billing Address</h2>
+              <div class="billing-address">
+                  <input type="checkbox" id="setBilling">
+                  <label for="setBilling">Use different billing address</label>
               </div>
-              <div class="row input-state input-state__data">
-                <div class="input-state__data">
-                  <input
-                    class="checkout-form__input state"
-                    type="text"
-                    placeholder="State/Province"
-                  />
-                  <input
-                    class="checkout-form__input zip__code"
-                    type="text"
-                    placeholder="Zip/Postal Code"
-                  />
-                </div>
-              </div>
-              <div class="row input-row">
-                <select
-                  class="checkout-form__input"
-                  name="Country"
-                  id="select-country"
-                >
-                  <option value="United States">Canada</option>
-                  <option value="Canada">Canada</option>
-                </select>
-              </div>
-            </div>
+              <!-- <input type="text" placeholder="Address">
+              <input type="text" placeholder="City">
+              <input type="text" placeholder="State/Province">
+              <input type="text" placeholder="Zip/Postal Code"> -->
           </div>
-        </section>
 
-        <section id="payment-section">
-          <h4 class="checkout-headings">Payment Method</h4>
+          <div id="checkout-right">
+              <h2>Payment Method</h2>
+              <input type="text" placeholder="Cardholder Name">
+              <input type="text" placeholder="Card Number">
+              <label for="Expiry">Expiry</label>
+              <div class="cc-expiry">
+                  <select name="ccExpMonth" id="ccExpMonth">
+                      <option value="01">Jan</option>
+                      <option value="02">Feb</option>
+                      <option value="03">Mar</option>
+                      <option value="04">Apr</option>
+                      <option value="05">May</option>
+                      <option value="06">Jun</option>
+                      <option value="07">Jul</option>
+                      <option value="08">Aug</option>
+                      <option value="09">Sep</option>
+                      <option value="10">Oct</option>
+                      <option value="11">Nov</option>
+                      <option value="12">Dec</option>
+                  </select>
+                  <select name="ccExpYear" id="ccExpYear">
+                      <option value="2024">2024</option>
+                      <option value="2025">2025</option>
+                      <option value="2026">2026</option>
+                      <option value="2027">2027</option>
+                      <option value="2028">2028</option>
+                      <option value="2029">2029</option>
+                      <option value="2030">2030</option>
+                      <option value="2031">2031</option>
+                      <option value="2032">2032</option>
+                      <option value="2033">2033</option>
+                      <option value="2034">2034</option>
+                  </select>
+                  <input type="tel" placeholder="CVV" id="cvv">
+              </div>
 
-          <div class="row input-row">
-            <input
-              class="checkout-form__input"
-              type="text"
-              placeholder="Cardholder Name"
-            />
+              <h2>Order Summary</h2>
+              <div id="order-summary">
+                  <div class="cart-item-1">
+                      <p>Men's Tech Shell Full-Zip</p>
+                      <p>$50.20</p>
+                  </div>
+                  <div class="cart-item-2">
+                      <p>Android Nylon Packable Jacket</p>
+                      <p>$33.60</p>
+                  </div>
+                  <div class="total">   
+                      <p>Total</p>
+                      <p>$83.80</p>
+                  </div>
+              </div>
+              <div class="product-details-cart-button" id="checkout-button">
+                  <button>PLACE ORDER</button>
+              </div>
           </div>
-          <div class="row input-row">
-            <input
-              class="checkout-form__input"
-              type="number"
-              placeholder="Card Number"
-            />
-          </div>
-          <p class="expiry">Expiry</p>
-          <div class="row input-state">
-            <select
-              class="checkout-form__input"
-              name="Month"
-              id="select-country"
-            >
-              <option value="United States">Jan</option>
-              <option value="Canada">Feb</option>
-              <option value="Canada">March</option>
-              <option value="Canada">April</option>
-              <option value="Canada">May</option>
-              <option value="Canada">Jun</option>
-              <option value="Canada">Jul</option>
-              <option value="Canada">Aug</option>
-              <option value="Canada">Sep</option>
-              <option value="Canada">Oct</option>
-              <option value="Canada">Nov</option>
-              <option value="Canada">Dec</option>
-            </select>
-            <select
-              class="checkout-form__input"
-              name="Year"
-              id="select-country"
-            >
-              <option value="United States">2015</option>
-              <option value="Canada">2016</option>
-              <option value="Canada">2017</option>
-              <option value="Canada">2018</option>
-              <option value="Canada">2019</option>
-              <option value="Canada">2020</option>
-              <option value="Canada">2021</option>
-            </select>
-            <input
-              class="checkout-form__input zip"
-              type="text"
-              placeholder="Zip/Postal Code"
-            />
-          </div>
-          <div class="row order-summary">
-            <h4 class="checkout-headings">Order Summary</h4>
-            <div class="order-summary__row">
-              <p class="expiry">Mens's Tech Savy Android</p>
-              <p class="expiry">$50.20</p>
-            </div>
-            <div class="order-summary__row">
-              <p class="expiry">Mens's Android Full-Zip</p>
-              <p class="expiry">$75.20</p>
-            </div>
-            <div class="order-summary__row">
-              <p class="expiry">Mens's Android Dark Shade</p>
-              <p class="expiry">$99.99</p>
-            </div>
-          </div>
-          <div class="order-summary__row">
-            <p class="expiry">Total</p>
-            <p class="expiry">$225.39</p>
-          </div>
-          <a id="cart-page__button" href="#">
-            <button class="banner__button checkout-page__button">
-              PLACE ORDER
-            </button>
-          </a>
-        </section>
 
-        <button class="sticky-button">PLACE ORDER</button>
-      </form>
-    </div>
+      </div>
+  </div>
+
     <footer id="cart-page__footer" class="footer">
       <a class="made-by" href="#">Made by Maaz</a>
       <button class="demo-only">Demo Only</button>

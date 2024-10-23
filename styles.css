@@ -884,3 +884,150 @@ section .banner__label {
     width: auto;
   }
 }
+
+
+
+
+.checkout-container{
+  display: flex;
+  flex-direction: column;
+  font-family: 'roboto',sans-serif;
+  padding: 0 24px 48px;
+}
+
+.checkout-heading{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkout-heading h1{
+  font-size: 14.3px;
+  margin: 0 0 4px;
+  font-weight: 350;
+}
+
+.checkout-heading p{
+  font-size: 12px;
+  font-weight: 250;
+}
+
+.checkout-container h2{
+  font-size: 13px;
+  margin: 10.79px 0;
+}
+
+.checkout-container input{
+  font-size: 13px;
+  padding: 8px 0;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.state-zipcode{
+  display:flex;
+  gap:10px;
+}
+
+.checkout-container label{
+  font-size: 13px;
+}
+
+.checkout-container select{
+  font-size: 16px;
+  padding: 8px 24px 8px 0px;
+  border: none;
+  outline: none;
+  background-color: white;
+  border-bottom: 0.5px solid black;
+}
+
+.billing-address{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+#setBilling{
+  width: auto;
+}
+
+.cc-expiry{
+  display:flex;
+  width: 100%;
+  gap: 10px;
+}
+
+#cvv{
+  margin: 0;
+  font-size: 16px;
+  width: 33%;
+}
+
+#ccExpMonth{
+  width: 33%;
+}
+
+#ccExpYear{
+  width: 33%;
+}
+
+#order-summary p{
+  font-size: 13px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.cart-item-1{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-item-2{
+  display: flex;
+  justify-content: space-between;
+}
+
+.total{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+@media(min-width:769px){
+
+  #change-checkout-orientation{
+      display: flex;
+      justify-content: space-between;
+      gap:40px;
+      max-width: 900px;
+      margin: 0 auto;
+  }
+
+  .checkout-heading h1{
+      margin-top: 64px;
+      font-size: 16.9px;
+  }
+  
+  #checkout-button button {
+      background-color: white;
+      color: black;
+      padding: 8px 44px;
+      font-size: 14px;
+      cursor: pointer;
+      border: none;
+      width: auto;
+      border: solid 2px black;
+  }
+  
+  .product-details-cart-button button:hover {
+      background-color: #555;
+  }
+  
+}
+
+
